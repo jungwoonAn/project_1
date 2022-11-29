@@ -5,69 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>-festival-</title>
+    <title>-festival-</title>
 
-	<link href="css/common.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 
-    <script>
-
-      //relative nav
-      $(function(){
-        $("#nav_icon").click(function(){
-          $("#hide_nav").slideToggle();
-        });
-      });
-
-      $(window).resize(function(){
-        if(window.innerWidth>=1100){
-          $('#hide_nav').hide();
-        }
-      });
-
-      var currentScrollTop=0;
-      $(document).ready(function(){
-      	scrollController();
-      	$(window).scroll(function(){
-      		scrollController();
-      	});
-      });
-
-      function scrollController(){
-      	currentScrollTop = $(window).scrollTop();
-      	if(currentScrollTop > 300){
-      		$("nav").addClass("fixed");
-      	}
-      	else {
-      		$("nav").removeClass("fixed");
-      	}
-      }
-
-      //countdown
-      var countDownDate = new Date("Jun 5, 2020 15:37:25").getTime();
-      var x = setInterval(function() {
-
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("cntdate").innerHTML = days + "d " + hours + "h "  + minutes + "m " + seconds + "s ";
-
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("cntdate").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-
-
-
-    </script>
+    <script src="js/sub.js"></script>
 
 
   </head>
