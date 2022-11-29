@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>festival</title>
+
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <script>
+
+      //relative nav
+      $(function(){
+        $("#nav_icon").click(function(){
+          $("#hide_nav").slideToggle();
+        });
+      });
+
+      $(window).resize(function(){
+        if(window.innerWidth>=1100){
+          $('#hide_nav').hide();
+        }
+      });
+
+      var currentScrollTop=0;
+      $(document).ready(function(){
+      	scrollController();
+      	$(window).scroll(function(){
+      		scrollController();
+      	});
+      });
+
+      function scrollController(){
+      	currentScrollTop = $(window).scrollTop();
+      	if(currentScrollTop > 300){
+      		$("nav").addClass("fixed");
+      	}
+      	else {
+      		$("nav").removeClass("fixed");
+      	}
+      }
+
+      //countdown
+      var countDownDate = new Date("Jun 5, 2020 15:37:25").getTime();
+      var x = setInterval(function() {
+
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cntdate").innerHTML = days + "d " + hours + "h "  + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("cntdate").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+
+
+
+    </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="top">
+        <header>
+          <nav>
+            <div id="nav_fixed">
+              <div id="show_nav1">
+                <a href="sub.html">ABOUT</a>
+                <a href="sub.html">HISTORY</a>
+                <a href="sub.html">LINEUP</a>
+              </div>
+          
+              <a href="main.html"><img src="img/main/ultra-music-festival.png" alt="logo" class="logo"></a>
+          
+              <div id="show_nav2">
+                <a href="sub.html">TICKET</a>
+                <a href="sub.html">GALLERY</a>
+                <a href="sub.html">NEWS</a>
+              </div>
+          
+              <img src="img/main/nav_icon.png" alt="nav_icon" id="nav_icon">
+            </div>
+          </nav>
+
+          <div id="hide_nav">
+            <a href="sub.html">ABOUT</a>
+            <a href="sub.html">HISTORY</a>
+            <a href="sub.html">LINEUP</a>
+            <a href="sub.html">TICKET</a>
+            <a href="sub.html">GALLERY</a>
+            <a href="sub.html">NEWS</a>
+          </div>
+         
+        </header>
+
+        <div id="slider">
+          <div id="center">
+          	<h1>Dance Music Festival<br><br><span>2020.March.20-21<br>@Miami</span></h1>
+            <div class="btbox">
+              <button>LINEUP</button>
+              <button>TICKET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+      	<div id="about">
+          <div id="photo1">
+            <img src="img/main/about-1.jpg" alt="photo">
+            <img src="img/main/about-2.jpg" alt="photo">
+          </div>
+
+          <div id="textbox1">
+            <h5>ABOUT</h5>
+            <h1><span>Rainbow Festival 2020 </span>comes with us</h1>
+            <p>In June, when the beautiful Jara Island is added with lush greenery, Rainbow Festival 2020 comes with sweet music, romance and camping. Once a year, you can feel the beauty of nature! If you want to sit on the grass and soak up the breeze and listen to the beautiful songs, simply pack up and start now.<br><br>Feel the changing colors of day and night made by nature, and make the memories of summer nights fall asleep by the sound of grass bugs. A happy day for you begins at Rainbow Festivities, where you can take a special break under the stars in nature, music and camping.</p><br><br>
+            <ul>
+              <li><i class="fas fa-check-circle"></i>Warm sunshine, cool breezes and sweet live music from musicians</li>
+              <li><i class="fas fa-check-circle"></i>Overnight at Jara Island, the best outdoor camping shrine in Korea</li>
+              <li><i class="fas fa-check-circle"></i>Happy moments containing our memories</li>
+            </ul>
+          </div>
+      	</div>
+
+      	<div id="features">
+          <div id="textbox2">
+            <h5>FEATURES</h5>
+            <h1>Music and Camping Festival</h1>
+          </div>
+
+          <div id="iconbox">
+            <a href="#" class="iconbox">
+              <img src="img/main/icon1.png" alt="icon">
+              <h3>Gallery</h3>
+              <p>View last photo & video</p>
+            </a>
+            <a href="#" class="iconbox">
+              <img src="img/main/icon2.png" alt="icon">
+              <h3>Line Up</h3>
+              <p>Coming soon</p>
+            </a>
+            <a href="#" class="iconbox">
+              <img src="img/main/icon3.png" alt="icon">
+              <h3>Ticket</h3>
+              <p>Early bird & Camping ticket</p>
+            </a>
+            <a href="#" class="iconbox">
+              <img src="img/main/icon4.png" alt="icon">
+              <h3>Camping</h3>
+              <p>Easily enjoy camping<br>information</p>
+            </a>
+            <a href="#" class="iconbox">
+              <img src="img/main/icon5.png" alt="icon">
+              <h3>Service</h3>
+              <p>shuttle bus from Seoul<br>to Rainbow Festival</p>
+            </a>
+            <a href="#" class="iconbox">
+              <img src="img/main/icon6.png" alt="icon">
+              <h3>Information</h3>
+              <p>Convenient festival information<br>to know in advance</p>
+            </a>
+          </div>
+
+      	</div>
+
+      	<article>
+          <img src="img/main/news-1.jpg" alt="news">
+          <div class="textbox3">
+            <h3>Event Notice for 2020</h3><br><br>
+            <p>Korea's largest music & camping festival 'Rainbow 2020' will be held on June 13 ~ 14 at 'Jara Island', a sacred camping place full of greenery!<br><br> The 2020 Rainbow Music & Camping Festival, celebrating its 10th anniversary, will be a camping healing festival where you can joy music in the beautiful Gapyeong nature and spend a day with your loved ones. Happy deviation of two days and one night! We look forward to your participation in Rainbow Music & Camping Festival.</p>
+          </div>
+      	</article>
+
+      	<article>
+          <div class="textbox3">
+            <h3>Rainbow Island Art Market<br>A special flea market day and night</h3><br><br>
+            <p>The flea market spreads through the forest from day to night. Green recording, merchants more free than anyone, and audiences more free than anyone It is a pleasant place than anywhere else.<br><br>There are also pretty items packed with care. The food booth and food truck that will touch your nose and tongue are also in place! Surrounded by nature in daytime, harmonious, At night, brilliant lights are lit up, adding to the charm of the night market.</p>
+          </div>
+          <img src="img/main/news-2.jpg" alt="news">
+      	</article>
+
+      	<article>
+          <img src="img/main/news-3.jpg" alt="news">
+          <div class="textbox3">
+            <h3>'Rainbow Music & Camping Festival 2019'<br>attracted 15,000 people</h3><br><br>
+            <p>Korea's largest music & camping festival 'Rainbow Music & Camping Festival 2019' was held in great success, attracting a total of 15,000 spectators for 1 night and 2 days from June 1 to 2.<br><br>'Rainbow Music & Camping Festival 2019' held at Gapyeong Jara Island is a large-scale festival where music and camping coexist in the ninth year. By constructing the largest camping zone in Korea, the audience enjoyed a day's departure from the city center.</p>
+          </div>
+      	</article>
+
+      	<div id="price">
+          <div id="textbox4">
+            <h5>TICKET</h5>
+            <h1>Make a reservation here</h1>
+          </div>
+
+          <div id="pricebox">
+            <div class="fee">
+              <img src="img/main/price-1.jpg" alt="show">
+              <h3>Admission</h3>
+              <ul>
+              	<li>Up to 4 purchases per person</li>
+              	<li>Send QR code to your mobile phone</li>
+                <li>Tickets include VAT and copyright fees</li>
+                <li>Preschoolers are Free width parents</li>
+              </ul>
+              <h1>$55.79</h1>
+              <h5>FOR PERSON</h5>
+              <button>BUY THE TICKET</button>
+            </div>
+
+            <div class="fee"> 
+              <img src="img/main/price-2.jpg" alt="camping">
+              <h3>Camping</h3>
+              <ul>
+                <li>Self-catering on camping site</li>
+                <li>Food can be brought in</li>
+                <li>Receive camping band after check-in</li>
+                <li>Cancellation of tickets the day before</li>
+              </ul>
+              <h1>$16.90</h1>
+              <h5>FOR PERSON</h5>
+              <button>BUY THE TICKET</button>
+            </div>
+
+            <div class="fee">
+              <img src="img/main/price-3.jpg" alt="bus">
+              <h3>Shuttle Bus</h3>
+              <ul>
+                <li>Up to 4 purchases per person</li>
+                <li>To 10:00 on Saturday, June 13th</li>
+                <li>Additional cars depart every 5 min.</li>
+                <li>Please check the product notice</li>
+              </ul>
+              <h1>$11.83</h1>
+              <h5>FOR PERSON</h5>
+              <button>BUY THE TICKET</button>
+            </div>
+
+          </div>
+      	</div>
+
+      	<div id="countdown">
+          <h1>Festival Countdown</h1>
+          <div id="cntdate"></div>       
+      	</div>
+
+      	<div id="video">
+          <div id="textbox5">
+            <h5>VIDEO</h5>
+            <h1>Immerse yourself in the festival</h1>
+          </div>
+
+          <div id="bg">
+            <video src="video/videoplay.mp4" loop muted autoplay></video>
+          </div>
+        </div>
+
+      	<div id="contact">
+          <div id="detail">
+            <div id="textbox6">
+              <h5>CONTACT US</h5>
+              <h1>Send us a message</h1>
+              <p>Please complete the form below to send us a message.<br>We would love to hear from you!</p><br><br>
+              <h3><i class="fas fa-phone"></i>+82-10-4894-3070</h3>
+              <h3><i class="fas fa-envelope-open-text"></i>info@rainbowfestival.co.kr</h3>
+            </div>
+
+            <div id="photo2">
+              <div id="address"><p>60  Gapyeong-eup,<br>Jaraseom-ro  Gapyeong-gun<br>Gyeonggi-do,<br>Republic of Korea</p></div>
+              <img src="img/main/contact-icon3.png">
+              <img src="img/main/contact.jpg" alt="festival">
+            </div>
+
+            <div id="message">
+              <input type="text" name="name" placeholder="Your name">
+              <input type="text" name="e-mail" placeholder="Your e-mail">
+              <input type="text" name="title" placeholder="Subject">
+              <textarea name="message" placeholder="Message"></textarea>
+              <button>Send a message</button>
+            </div>
+        	</div>
+        </div>
+
+      </section>
+
+      <footer>
+        <h4>© 2020 ULTRA ENTERPRISES INC. ALL RIGHTS RESERVED</h4>
+      </footer>
+
+    </div>
+  </body>
+
+</html>
