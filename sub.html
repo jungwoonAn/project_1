@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>festival</title>
+
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/sub.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <script>
+
+      //relative nav
+      $(function(){
+        $("#nav_icon").click(function(){
+          $("#hide_nav").slideToggle();
+        });
+      });
+
+      $(window).resize(function(){
+        if(window.innerWidth>=1100){
+          $('#hide_nav').hide();
+        }
+      });
+
+      var currentScrollTop=0;
+      $(document).ready(function(){
+      	scrollController();
+      	$(window).scroll(function(){
+      		scrollController();
+      	});
+      });
+
+      function scrollController(){
+      	currentScrollTop = $(window).scrollTop();
+      	if(currentScrollTop > 300){
+      		$("nav").addClass("fixed");
+      	}
+      	else {
+      		$("nav").removeClass("fixed");
+      	}
+      }
+
+
+      //testmonials slideshow
+      function slides(){
+        $('.slides').animate({left:-1000}, function(){
+          $('.slides li:first').appendTo('.slides');
+          $('.slides').css({left:0});
+        });
+      }
+
+      setInterval(slides, 3000);
+
+
+      //moments click slideshow
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("photo");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+
+      
+    </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="top">
+        <header>
+          <nav>
+            <div id="nav_fixed">
+              <div id="show_nav1">
+                <a href="sub.html" class="nav_active">ABOUT</a>
+                <a href="main.html">HISTORY</a>
+                <a href="main.html">LINEUP</a>
+              </div>
+          
+              <a href="main.html"><img src="img/main/ultra-music-festival.png" alt="logo" class="logo"></a>
+          
+              <div id="show_nav2">
+                <a href="main.html">TICKET</a>
+                <a href="main.html">GALLERY</a>
+                <a href="main.html">NEWS</a>
+              </div>
+          
+              <img src="img/main/nav_icon.png" alt="nav_icon" id="nav_icon">
+            </div>
+          </nav>
+
+          <div id="hide_nav">
+            <a href="sub.html" class="nav_active">ABOUT</a>
+            <a href="main.html">HISTORY</a>
+            <a href="main.html">LINEUP</a>
+            <a href="main.html">TICKET</a>
+            <a href="main.html">GALLERY</a>
+            <a href="main.html">NEWS</a>
+          </div>         
+        </header>
+
+        <div id="intro">
+          <h5>ABOUT US</h5>
+          <h1>What is Ultra Music Festival?</h1>
+          <p>ULTRA MUSIC FESTIVAL IS A 3-DAY <br>IMMERSIVE ELECTRONIC DANCE MUSIC <br>FESTIVAL THAT TAKES PLACE IN THE <br>HEART OF DOWNTOWN MIAMI.</p>
+        </div>
+
+      </div>
+
+      <div id="sub">
+
+        <div id="overview">
+          <h1>At a glance</h1>
+          <div class="box">
+            <h5>Location</h5>
+            <h3>Bayfront Park<br>Downtown Miami, FL</h3>
+          </div>
+
+          <div class="box">
+            <h5>Dates</h5>
+            <h3>March 20-22<br>2020</h3>
+          </div>
+
+          <div class="box">
+            <h5>Edition</h5>
+            <h3>22nd</h3>
+          </div>
+
+          <div class="box">
+            <h5>Founded</h5>
+            <h3>1999</h3>
+          </div>
+
+          <img src="img/sub/overview.jpg" alt="">
+        </div>
+              
+        <div id="experience">
+          <div id="music">
+            <h1>WHY ATTEND ULTRA?</h1>
+            <article>
+              <div class="textbox">
+                <h5>MUSIC</h5>
+                <p>Ultra provides attendees with a diverse array of electronic dance music that includes a multitude of genres— progressive house, big room, techno, trance, dubstep and more! There’s something for everyone to choose from when they arrive at Bayfront Park.<br><br>In addition, Ultra Music Festival represents the start of the calendar year in electronic music. Artists spend the winter time in the studio during the festival off-season, fine tuning their new music and set production. From special guests, groundbreaking audiovisual effects, and of course brand new music— an authentic Ultra Music Festival performance is something undeniably groundbreaking, something that can’t be witnessed anywhere else.</p>
+              </div>
+              <img src="img/sub/music1.jpg" alt="music1">            
+            </article>
+
+            <article>
+              <img src="img/sub/music2.jpg" alt="music2">
+              <div class="textbox">
+                <h5>ATMOSPHERE</h5>
+                <p>Ultra Music Festival takes place at Bayfront Park in the center of Downtown Miami— surrounded by both the waterfront and city skyline.<br><br>Attendees can take in the stunning backdrop of the Miami skyline and Biscayne Bay while watching their favorite artists perform.</p>
+              </div>
+            </article>
+          </div> 
+
+          <div id="production">
+            <article>
+              <div class="textbox">
+                <h5>PRODUCTION</h5>
+                <p>Ultra Music Festival produces the most technologically advanced, large-scale festival productions in the world.<br><br>Each stage serves to transport attendees to a different musical dimension where which audio and production work together as one. It’s encouraged for attendees to explore each stage to truly get the entire Ultra Music Festival experience.</p>
+              </div>
+              <img src="img/sub/production.jpg" alt="production">            
+            </article>
+          </div> 
+
+          <div id="art">
+            <article>
+              <div class="textbox">
+                <h5>ART INSTALLATIONS</h5>
+                <p>For those looking to take a break from the music, Ultra Music Festival features interactive art installations, live-painting displays and other immersive experiences.<br><br>Visual art installations feature a cutting-edge synergy between music, art and technology. Meanwhile, a selection of the most innovative artists charm attendees with live-painting performances at various life-scale installations throughout the festival grounds.</p>
+              </div>  
+              <img src="img/sub/art.jpg" alt="art">            
+            </article>
+          </div>
+        </div>
+
+        <div id="testmonials">
+          <ul class="slides">
+            <li>
+              <h3 class="text">"It’s progressed so much over the years, it’s becoming something of a phenomena."</h3>
+              <img src="https://ultramusicfestival.com/wp-content/uploads/2019/10/miami-about-carlcox.png" alt="">
+              <p>Carl Cox</p>
+            </li>
+
+            <li>
+              <h3 class="text">"We celebrate music, we celebrate people, we celebrate life."</h3>
+              <img src="https://ultramusicfestival.com/wp-content/uploads/2019/10/miami-about-afrojack.png" alt="">
+              <p>Afrojack</p>
+            </li>
+
+            <li>
+              <h3 class="text">"Giving people a chance to experience dance music, in the most beautiful and proper way there is…"</h3>
+              <img src="https://ultramusicfestival.com/wp-content/uploads/2019/10/miami-about-hardwell.png" alt="">
+              <p>Hardwell</p>
+            </li>
+
+            <li>
+              <h3 class="text">"Ultra has made so many people happy, including myself... it's a celebration of life, it's a celebration of the young, the new and the fresh."</h3>
+              <img src="https://ultramusicfestival.com/wp-content/uploads/2019/12/miami-about-arminvanbuuren-1.png" alt="">
+              <p>Armin van Buuren</p>
+            </li>
+
+            <li>
+              <h3 class="text">"Every DJ from every country who is something is at Ultra, it’s like the Olympics of the DJs."</h3>
+              <img src="https://ultramusicfestival.com/wp-content/uploads/2019/12/miami-about-tiesto-1.png" alt="">
+              <p>Tiësto</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <div id="numbers">
+          <h1>By the numbers</h1>
+          <div class="counter">
+            <h5>Countries in<br>attendance</h5>
+            <h1>105</h1>
+          </div>
+
+          <div class="counter">
+            <h5>Artist<br>performances</h5>
+            <h1>210</h1>
+          </div>
+
+          <div class="counter">
+            <h5>Hours of<br>music</h5>
+            <h1>287</h1>
+          </div>
+
+          <div class="counter">
+            <h5>Number of<br>LED panels</h5>
+            <h1>300</h1>
+          </div>
+        </div>
+
+        <div id="moments">
+          <h1>Moments</h1>
+          <div class="photobox">
+            <img class="photo" src="img/sub/moment1.jpg" alt="">
+            <img class="photo" src="img/sub/moment2.jpg" alt="">
+            <img class="photo" src="img/sub/moment3.jpg" alt="">
+            <img class="photo" src="img/sub/moment4.jpg" alt="">
+            <img class="photo" src="img/sub/moment5.jpg" alt="">
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dotbox">
+              <span class="dot active" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>  
+
+      <footer>
+        <h4>© 2020 ULTRA ENTERPRISES INC. ALL RIGHTS RESERVED</h4>
+      </footer>
+
+    </div>
+  </body>
+
+</html>
