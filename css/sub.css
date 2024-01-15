@@ -1,0 +1,88 @@
+﻿@charset "UTF-8";
+
+.active a {background-color:#fba16c; color:#fff; }
+
+#sub {width:1200px; height:5400px; margin:0 auto; z-index:1;}
+
+#menu {width:1200px; height:50px; margin:0; background-color:#fff;}
+#menu img {float:left; margin:17px 0 0 25px;}
+#menu ul {font-family:"나눔 고딕"; font-size:13px; float:left; margin:15px 0 0 10px;}
+#menu ul li {float:left; margin:0px 10px;  color:#666;}
+#menu ul li a {text-decoration:none; color:#333;}
+#menu ul li a:hover {font-weight:bold;}
+#menu .num {float:right; width:150px; height:30px; margin:10px 25px 0 0px; background-color:#fff; border-radius:5px;box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#menu .num p {font-family:"나눔 고딕"; font-size:13px; text-align:center; margin:5px 0 0 0px;}
+
+#contents {width:1200px; height:600px; margin:0 auto; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#contents h4 {float:left; width:1200px; heigh:25px; margin:30px 0 0 60px; font-family:"나눔 고딕"; font-size:24px; color:#666; }
+
+#box {float:left; width:550px; height:450px; margin:20px 0 0 50px; }
+#box img {width:450px; height:100%; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#cm {float:right; width:80px; height:450px; }
+#cm img {width:100%; height:100%; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#cm li {margin: 5px 0px; }
+#cm li:hover {cursor:pointer;}
+#cm .t {float:left; width:100%; height:30px;  font-size:24px; color:#999; text-align:center;}
+
+#contents table {float:left; width:400px; margin: 20px 0 0 50px; border-top:1px solid #999; border-bottom:1px solid #999; }
+#contents th {width:150px; height:60px; padding:0 0 0 30px; text-align:left; font-family:"나눔 고딕"; font-size:14px; color:#333;}
+#contents td {width:350px; height:60px; padding:0 0 0 30px; text-align:left; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#contents td span { font-family:"나눔 고딕"; font-size:24px; color:#333; font-weight:bold;}
+#contents td select {width:70px; height:25px; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#bt {float: left; width:400px; height:50px; margin:80px 0 0 50px;}
+.bt1 {float:left; width:150px; height:50px; font-family:"나눔 고딕"; font-size:18px; font-weight:bold; color:#fff; background-color:#fba16c; border:none; border-radius:5px; }
+.bt1:hover {background-color: white; color:#333; border:2px solid #fba16c;}
+.bt2 {float:left; width:130px; height:50px; margin: 0 0 0 10px; font-family:"나눔 고딕"; font-size:18px; font-weight:bold; color:#fff; background-color:black; border:none; border-radius:5px;}
+.bt2:hover {opacity:0.3;}
+.bt3 {float:left; width:100px; height:50px; margin: 0 0 0 10px; font-family:"나눔 고딕"; font-size:18px; font-weight:bold; color:#666; background-color:#fff; border-radius:5px;  border:1px solid #666; box-sizing:border-box;}
+.bt3:hover {background-color:red; color:white; border:none;}
+
+#choice {width:1200px; height:300px; margin:20px 0px; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#choice h6 {float:left; width:1200px; heigh:25px; margin:10px 0 0 60px; font-family:"나눔 고딕"; font-size:16px; color:#666; }
+#choice .cb1 {float:left; width:200px; height:250px; margin:15px 0 0 55px; }
+#choice .cb2 {float:left; width:200px; height:250px; margin:15px 0 0 20px; }
+#choice .cb3 {float:left; width:200px; height:250px; margin:15px 0 0 20px; }
+#choice .cb4 {float:left; width:200px; height:250px; margin:15px 0 0 20px; }
+#choice .cb5 {float:left; width:200px; height:250px; margin:15px 0 0 20px; }
+#choice img {float:left; width:200px; height:200px; margin:0 ; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box; }
+#choice a {text-align:center; text-decoration:none; color:#666; font-size:12px; font-family:"나눔 고딕";}
+#choice a span {font-size:14px; font-weight:bold;}
+#choice a:hover {color:red; }
+
+#detail {width:1200px; height:3500px; margin:20px 0px; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+.detail_menu {width:100%; height:35px; background-color:#eee;}
+.detail_menu ul {font-family:"나눔 고딕"; font-size:14px; float:left; margin:5px  20px; }
+.detail_menu ul li {float:left; margin:0px 20px;  color:#999;}
+.detail_menu ul li a {text-decoration:none; color:#333;}
+.detail_menu ul li a:hover {font-weight:bold; color:red;}
+#detail .d {font-weight:bold;}
+#detail img {float:left; width:850px; margin:0 0 0 175px;}
+
+
+#review {width:1200px; height:200px; margin:20px 0px; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#review .r {font-weight:bold;}
+#review button {float:right; width:100px; height:25px; margin: 20px 50px 0 0px; font-family:"나눔 고딕"; font-size:13px; font-weight:bold; color:#fff; background-color:#fba16c; border:none; border-radius:5px;}
+#review table {float:left; width:1100px; margin: 20px 0 0 50px; border-top:2px solid #eee; border-bottom:1px solid #eee; }
+#review .td1 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#review .td2 {width:500px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#review .td3 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#review .td4 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#review .td5 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+
+#qa {width:1200px; height:200px; margin:20px 0px; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#qa .q {font-weight:bold;}
+#qa button {float:right; width:100px; height:25px; margin: 20px 50px 0 0px; font-family:"나눔 고딕"; font-size:13px; font-weight:bold; color:#fff; background-color:#fba16c; border:none; border-radius:5px;}
+#qa table {float:left; width:1100px; margin: 20px 0 0 50px; border-top:2px solid #eee; border-bottom:1px solid #eee; }
+#qa .td1 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#qa .td2 {width:500px; height:20px; text-align:left; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#qa .td2 a {text-decoration:none; color:#666;}
+#qa .td2 a:hover {font-weight:bold;}
+#qa .td3 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#qa .td4 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+#qa .td5 {width:100px; height:20px; text-align:center; font-family:"나눔 고딕"; font-size:13px; color:#666;}
+
+#check {width:1200px; height:400px; margin:20px 0px; background-color:#fff; border-radius:5px; box-shadow:4px 4px 4px #eee; border:1px solid #eee; box-sizing:border-box;}
+#check .c {font-weight:bold;}
+#check h6 {float:left; width:1200px; heigh:25px; margin:10px 0 0 30px; font-family:"나눔 고딕"; font-size:16px; color:#666;}
+.ci ul {font-family:"나눔 고딕"; font-size:13px; margin:5px  20px; }
+.ci ul li {margin:5px 20px;  color:#666;}
